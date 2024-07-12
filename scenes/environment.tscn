@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://r1xoaognxcot"]
+
+[ext_resource type="Texture2D" uid="uid://dpfni0lumt1tg" path="res://assets/sprites/sun.png" id="1_n54nj"]
+[ext_resource type="Texture2D" uid="uid://dklo2i4phuxfl" path="res://assets/sprites/background.png" id="2_cxmde"]
+[ext_resource type="Texture2D" uid="uid://bus78ao72edfu" path="res://assets/sprites/cloud_small.png" id="3_yf222"]
+[ext_resource type="Texture2D" uid="uid://bwrxwd6p688mv" path="res://assets/sprites/cloud_large.png" id="4_b8qo0"]
+[ext_resource type="Texture2D" uid="uid://derw18njl6h48" path="res://assets/sprites/foreground.png" id="5_ebxps"]
+[ext_resource type="Texture2D" uid="uid://ce0g00fg5wdtu" path="res://assets/sprites/rock_small.png" id="6_53sjj"]
+[ext_resource type="Texture2D" uid="uid://b48vxi2tcfuhv" path="res://assets/sprites/rock_large.png" id="7_x7xx2"]
+[ext_resource type="Script" path="res://scenes/test_camera.gd" id="8_gfwo4"]
+
+[node name="Environment" type="ParallaxBackground"]
+
+[node name="Layer0" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Background" type="Sprite2D" parent="Layer0"]
+texture_filter = 1
+texture = ExtResource("2_cxmde")
+centered = false
+
+[node name="Layer1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1280, 0)
+
+[node name="CloudLarge" type="Sprite2D" parent="Layer1"]
+texture_filter = 1
+position = Vector2(570, 30)
+texture = ExtResource("4_b8qo0")
+centered = false
+
+[node name="Layer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="CloudSmall0" type="Sprite2D" parent="Layer2"]
+texture_filter = 1
+position = Vector2(950, 200)
+texture = ExtResource("3_yf222")
+centered = false
+
+[node name="CloudSmall1" type="Sprite2D" parent="Layer2"]
+texture_filter = 1
+position = Vector2(110, 140)
+texture = ExtResource("3_yf222")
+centered = false
+
+[node name="Layer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(8, 8)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Foreground" type="Sprite2D" parent="Layer3"]
+texture_filter = 1
+position = Vector2(0, 520)
+texture = ExtResource("5_ebxps")
+centered = false
+
+[node name="RockSmall0" type="Sprite2D" parent="Layer3"]
+texture_filter = 1
+position = Vector2(990, 620)
+texture = ExtResource("6_53sjj")
+centered = false
+
+[node name="RockSmall1" type="Sprite2D" parent="Layer3"]
+texture_filter = 1
+position = Vector2(330, 630)
+texture = ExtResource("6_53sjj")
+centered = false
+
+[node name="RockSmall2" type="Sprite2D" parent="Layer3"]
+texture_filter = 1
+position = Vector2(90, 600)
+texture = ExtResource("6_53sjj")
+centered = false
+
+[node name="RockLarge" type="Sprite2D" parent="Layer3"]
+texture_filter = 1
+position = Vector2(460, 570)
+texture = ExtResource("7_x7xx2")
+centered = false
+
+[node name="Sun" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(840, 380)
+texture = ExtResource("1_n54nj")
+centered = false
+
+[node name="TestCamera" type="Camera2D" parent="."]
+offset = Vector2(640, 360)
+script = ExtResource("8_gfwo4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.017
+autostart = true
+
+[connection signal="timeout" from="Timer" to="TestCamera" method="_on_timer_timeout"]
