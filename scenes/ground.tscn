@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bws1nl24suduy"]
+[gd_scene load_steps=3 format=3 uid="uid://btfsch1t6b4lv"]
 
-[ext_resource type="Texture2D" uid="uid://d22c727hd1fud" path="res://assets/Hills Layer 05.png" id="1_ea0f3"]
+[ext_resource type="Texture2D" uid="uid://dgwhiakyuls6d" path="res://assets/sprites/ground_wide.png" id="1_rr3w8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev1le"]
+size = Vector2(2560, 200)
 
 [node name="Ground" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ea0f3")
+position = Vector2(0, 520)
+texture = ExtResource("1_rr3w8")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1280, 620)
+shape = SubResource("RectangleShape2D_ev1le")
