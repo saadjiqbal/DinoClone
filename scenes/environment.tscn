@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://derw18njl6h48" path="res://assets/sprites/foreground.png" id="5_ebxps"]
 [ext_resource type="Texture2D" uid="uid://ce0g00fg5wdtu" path="res://assets/sprites/rock_small.png" id="6_53sjj"]
 [ext_resource type="Texture2D" uid="uid://b48vxi2tcfuhv" path="res://assets/sprites/rock_large.png" id="7_x7xx2"]
-[ext_resource type="Script" path="res://scenes/test_camera.gd" id="8_gfwo4"]
+[ext_resource type="Script" path="res://scripts/test_camera.gd" id="8_gfwo4"]
 
 [node name="Environment" type="ParallaxBackground"]
 
