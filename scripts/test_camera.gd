@@ -2,7 +2,6 @@ extends Camera2D
 
 var move_timer: int = 0
 
-
 # "Pixel" perfect camera motion that's hard to look at
 #func _on_timer_timeout():
 	#move_timer += 1
