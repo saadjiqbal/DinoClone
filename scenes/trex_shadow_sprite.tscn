@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://cuwl2mmqfc4ct"]
+
+[ext_resource type="Texture2D" uid="uid://bqrubrvn6a1q5" path="res://assets/sprites/trex/run_shadow/01.png" id="1_y4jb8"]
+[ext_resource type="Texture2D" uid="uid://b3c1o1khek2wn" path="res://assets/sprites/trex/run_shadow/02.png" id="2_0twnf"]
+[ext_resource type="Texture2D" uid="uid://dbx422p0eck5a" path="res://assets/sprites/trex/run_shadow/03.png" id="3_tcd44"]
+[ext_resource type="Texture2D" uid="uid://4k52qppvo8rv" path="res://assets/sprites/trex/run_shadow/04.png" id="4_qvwhb"]
+[ext_resource type="Texture2D" uid="uid://2ihgcb7x8xbh" path="res://assets/sprites/trex/run_shadow/05.png" id="5_dadjm"]
+[ext_resource type="Texture2D" uid="uid://dqbuh507q40ap" path="res://assets/sprites/trex/run_shadow/06.png" id="6_i8h43"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pl2q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y4jb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0twnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tcd44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qvwhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dadjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i8h43")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="TrexShadowSprite" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1pl2q")
+animation = &"run"
+speed_scale = 2.0
+centered = false
