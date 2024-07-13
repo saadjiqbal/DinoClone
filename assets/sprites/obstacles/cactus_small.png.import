@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3jut2m7dusuw"
-path="res://.godot/imported/cactus_large.png-81100ae56b734b26aa4820b9cc8215f3.ctex"
+uid="uid://dla0odtunpcb7"
+path="res://.godot/imported/cactus_small.png-37fc610510ff59e9b68a725d001b46ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cactus_large.png"
-dest_files=["res://.godot/imported/cactus_large.png-81100ae56b734b26aa4820b9cc8215f3.ctex"]
+source_file="res://assets/sprites/obstacles/cactus_small.png"
+dest_files=["res://.godot/imported/cactus_small.png-37fc610510ff59e9b68a725d001b46ba.ctex"]
 
 [params]
 
