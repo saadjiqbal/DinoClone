@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://5vsyheq2crg4"]
+
+[ext_resource type="Texture2D" uid="uid://dq22debr5olo1" path="res://assets/sprites/obstacles/bird/0.png" id="1_x5ju3"]
+[ext_resource type="Texture2D" uid="uid://b12lwodx34jlf" path="res://assets/sprites/obstacles/bird/1.png" id="2_pw4jp"]
+[ext_resource type="Texture2D" uid="uid://cumx1er1x4csx" path="res://assets/sprites/obstacles/bird/2.png" id="3_ql2ww"]
+[ext_resource type="Texture2D" uid="uid://bwv6yj1qidlsu" path="res://assets/sprites/obstacles/bird/3.png" id="4_pw7wx"]
+[ext_resource type="Texture2D" uid="uid://c2rxxek4f704y" path="res://assets/sprites/obstacles/bird/4.png" id="5_4r5bt"]
+[ext_resource type="Texture2D" uid="uid://bab3nverdgxbv" path="res://assets/sprites/obstacles/bird/5.png" id="6_648dw"]
+[ext_resource type="Texture2D" uid="uid://cpu8x4si84bve" path="res://assets/sprites/obstacles/bird/6.png" id="7_8dust"]
+[ext_resource type="Texture2D" uid="uid://cbqs8b1mh0rm4" path="res://assets/sprites/obstacles/bird/7.png" id="8_qqjb6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6oro2"]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": ExtResource("1_x5ju3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pw4jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ql2ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pw7wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4r5bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_648dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8dust")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qqjb6")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 5.0
+}]
+
+[node name="BirdSprite" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6oro2")
+animation = &"flap"
+speed_scale = 2.0
+centered = false
