@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3dypll6ju1pq"
-path="res://.godot/imported/6.png-c68c14b576405fffb6eb8440124c430c.ctex"
+uid="uid://ds20qy4v0itvj"
+path="res://.godot/imported/0.png-0a0b7324941bf6e1e59a82939d9ded30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/trex/run/6.png"
-dest_files=["res://.godot/imported/6.png-c68c14b576405fffb6eb8440124c430c.ctex"]
+source_file="res://assets/sprites/trex/run/0.png"
+dest_files=["res://.godot/imported/0.png-0a0b7324941bf6e1e59a82939d9ded30.ctex"]
 
 [params]
 
