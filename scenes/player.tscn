@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqx7rydhrsbim"]
+[gd_scene load_steps=12 format=3 uid="uid://bqx7rydhrsbim"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ooo1q"]
+[ext_resource type="Texture2D" uid="uid://v8qwrruuqt6r" path="res://assets/sprites/trex/crouch/0.png" id="2_r421t"]
+[ext_resource type="Texture2D" uid="uid://cxxhyeidky0le" path="res://assets/sprites/trex/crouch/1.png" id="3_m42dq"]
 [ext_resource type="Texture2D" uid="uid://12ri44p6dtfv" path="res://assets/sprites/trex/run/1.png" id="5_vxegp"]
 [ext_resource type="Texture2D" uid="uid://bemvg1o0ij664" path="res://assets/sprites/trex/run/2.png" id="6_ylh6l"]
 [ext_resource type="Texture2D" uid="uid://da7n8w84v86b6" path="res://assets/sprites/trex/run/3.png" id="7_akp5l"]
@@ -12,26 +14,14 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_vxegp")
+"texture": ExtResource("2_r421t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ylh6l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_akp5l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_2bwox")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_k0us5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_dgkw4")
+"texture": ExtResource("3_m42dq")
 }],
 "loop": true,
 "name": &"crouch",
-"speed": 12.0
+"speed": 2.0
 }, {
 "frames": [],
 "loop": true,
@@ -121,12 +111,18 @@ script = ExtResource("1_ooo1q")
 sprite_frames = SubResource("SpriteFrames_cdxso")
 animation = &"crouch"
 autoplay = "idle"
-frame_progress = 0.216824
+frame = 1
+frame_progress = 0.484378
 centered = false
 
 [node name="RunningCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(95, 85)
 rotation = 0.461265
+shape = SubResource("CapsuleShape2D_62md1")
+
+[node name="CrouchingCollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(112, 103)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_62md1")
 
 [connection signal="animation_finished" from="PlayerAnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
