@@ -18,10 +18,19 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_m42dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m42dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m42dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r421t")
 }],
 "loop": true,
 "name": &"crouch",
-"speed": 2.0
+"speed": 10.0
 }, {
 "frames": [],
 "loop": true,
@@ -111,8 +120,7 @@ script = ExtResource("1_ooo1q")
 sprite_frames = SubResource("SpriteFrames_cdxso")
 animation = &"crouch"
 autoplay = "idle"
-frame = 1
-frame_progress = 0.484378
+frame_progress = 0.896288
 centered = false
 
 [node name="RunningCollisionShape2D" type="CollisionShape2D" parent="."]
