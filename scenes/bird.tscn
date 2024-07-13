@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://uacyk8ixa3r1"]
+
+[ext_resource type="Texture2D" uid="uid://dq22debr5olo1" path="res://assets/sprites/obstacles/bird/0.png" id="1_outs2"]
+[ext_resource type="Texture2D" uid="uid://b12lwodx34jlf" path="res://assets/sprites/obstacles/bird/1.png" id="2_6nmlu"]
+[ext_resource type="Texture2D" uid="uid://cumx1er1x4csx" path="res://assets/sprites/obstacles/bird/2.png" id="3_eq4wb"]
+[ext_resource type="Texture2D" uid="uid://bwv6yj1qidlsu" path="res://assets/sprites/obstacles/bird/3.png" id="4_v5dcr"]
+[ext_resource type="Texture2D" uid="uid://c2rxxek4f704y" path="res://assets/sprites/obstacles/bird/4.png" id="5_7dwq0"]
+[ext_resource type="Texture2D" uid="uid://bab3nverdgxbv" path="res://assets/sprites/obstacles/bird/5.png" id="6_s57mo"]
+[ext_resource type="Texture2D" uid="uid://cpu8x4si84bve" path="res://assets/sprites/obstacles/bird/6.png" id="7_3ew7o"]
+[ext_resource type="Texture2D" uid="uid://cbqs8b1mh0rm4" path="res://assets/sprites/obstacles/bird/7.png" id="8_dy6nm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_035ef"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_outs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6nmlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eq4wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v5dcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7dwq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s57mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3ew7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dy6nm")
+}],
+"loop": true,
+"name": &"flap",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2my5"]
+radius = 19.0
+height = 114.0
+
+[node name="Bird" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_035ef")
+animation = &"flap"
+frame_progress = 0.557044
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(66, 21)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_x2my5")

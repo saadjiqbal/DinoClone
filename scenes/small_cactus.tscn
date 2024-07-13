@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://o7n23v4ynukl"]
+
+[ext_resource type="Texture2D" uid="uid://dla0odtunpcb7" path="res://assets/sprites/obstacles/cactus_small.png" id="1_g5qjf"]
+
+[node name="SmallCactus" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g5qjf")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(70, 60, 80, 60, 80, 50, 90, 50, 90, 70, 80, 70, 80, 80, 70, 80, 70, 110, 60, 110, 60, 70, 50, 70, 50, 60, 40, 60, 40, 20, 50, 20, 50, 50, 60, 50, 60, 0, 70, 0)
