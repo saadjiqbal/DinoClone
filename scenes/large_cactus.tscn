@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/large_cactus.gd" id="1_xu1ho"]
 
 [node name="LargeCactus" type="Area2D"]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_xu1ho")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

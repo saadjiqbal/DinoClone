@@ -35,13 +35,16 @@ func _process(delta):
 func spawn_obstacles():
 		if current_obstacles.is_empty() || previous_obstacle.position.x < randi_range(200, 500):
 			var new_obstacle = obstacles[randi() % obstacles.size()].instantiate()
+
 			previous_obstacle = new_obstacle
+
 			var new_obstacle_h = new_obstacle.get_node("Sprite2D").texture.get_height()
+			var new_obstacle_scale = new_obstacle.get_node("Sprite2D").scale
 
-			var new_obstacle_x_pos = 1380
-			var new_obstacle_y_pos = screen_size.y - ground_height - (new_obstacle_h / 2)
+			# 35 is the offset num of pixels otherwise, obstacle spawns on ground above dino position
+			var new_obstacle_y_pos = screen_size.y - ground_height - ((new_obstacle_h * new_obstacle_scale.y) / 2) + 35
 
-			new_obstacle.position = Vector2i(new_obstacle_x_pos, new_obstacle_y_pos)
+			new_obstacle.position = Vector2i(1380, new_obstacle_y_pos)
 
 			add_child(new_obstacle)
 		
