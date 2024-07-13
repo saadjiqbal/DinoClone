@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://o7n23v4ynukl"]
+[gd_scene load_steps=3 format=3 uid="uid://o7n23v4ynukl"]
 
+[ext_resource type="Script" path="res://scripts/small_cactus.gd" id="1_8chjr"]
 [ext_resource type="Texture2D" uid="uid://dla0odtunpcb7" path="res://assets/sprites/obstacles/cactus_small.png" id="1_g5qjf"]
 
 [node name="SmallCactus" type="Area2D"]
+script = ExtResource("1_8chjr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_g5qjf")

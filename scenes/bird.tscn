@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://uacyk8ixa3r1"]
+[gd_scene load_steps=12 format=3 uid="uid://uacyk8ixa3r1"]
 
+[ext_resource type="Script" path="res://scripts/bird.gd" id="1_1x3sn"]
 [ext_resource type="Texture2D" uid="uid://dq22debr5olo1" path="res://assets/sprites/obstacles/bird/0.png" id="1_outs2"]
 [ext_resource type="Texture2D" uid="uid://b12lwodx34jlf" path="res://assets/sprites/obstacles/bird/1.png" id="2_6nmlu"]
 [ext_resource type="Texture2D" uid="uid://cumx1er1x4csx" path="res://assets/sprites/obstacles/bird/2.png" id="3_eq4wb"]
@@ -51,10 +52,12 @@ radius = 19.0
 height = 114.0
 
 [node name="Bird" type="Area2D"]
+script = ExtResource("1_1x3sn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_035ef")
 animation = &"flap"
+autoplay = "flap"
 frame_progress = 0.557044
 centered = false
 
