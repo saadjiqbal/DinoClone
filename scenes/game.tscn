@@ -8,8 +8,7 @@
 
 [node name="Player" parent="." instance=ExtResource("1_hn6f4")]
 z_index = 1
-position = Vector2(165, 520)
-scale = Vector2(3, 3)
+position = Vector2(93, 520)
 
 [node name="Ground" parent="." instance=ExtResource("3_i3nmr")]
 

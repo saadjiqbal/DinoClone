@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://1nvb8dmcexot"]
 
 [ext_resource type="Script" path="res://scripts/environment.gd" id="1_6c4yq"]
-[ext_resource type="Texture2D" uid="uid://dklo2i4phuxfl" path="res://assets/sprites/background.png" id="2_7eab4"]
-[ext_resource type="Texture2D" uid="uid://bwrxwd6p688mv" path="res://assets/sprites/cloud_large.png" id="3_hpbvw"]
-[ext_resource type="Texture2D" uid="uid://bus78ao72edfu" path="res://assets/sprites/cloud_small.png" id="4_87xpt"]
-[ext_resource type="Texture2D" uid="uid://ce0g00fg5wdtu" path="res://assets/sprites/rock_small.png" id="6_h6m57"]
-[ext_resource type="Texture2D" uid="uid://b48vxi2tcfuhv" path="res://assets/sprites/rock_large.png" id="7_nl2qu"]
-[ext_resource type="Texture2D" uid="uid://dpfni0lumt1tg" path="res://assets/sprites/sun.png" id="8_fxs1w"]
+[ext_resource type="Texture2D" uid="uid://dklo2i4phuxfl" path="res://assets/sprites/environment/background.png" id="2_7eab4"]
+[ext_resource type="Texture2D" uid="uid://bwrxwd6p688mv" path="res://assets/sprites/environment/cloud_large.png" id="3_hpbvw"]
+[ext_resource type="Texture2D" uid="uid://bus78ao72edfu" path="res://assets/sprites/environment/cloud_small.png" id="4_87xpt"]
+[ext_resource type="Texture2D" uid="uid://ce0g00fg5wdtu" path="res://assets/sprites/environment/rock_small.png" id="6_h6m57"]
+[ext_resource type="Texture2D" uid="uid://b48vxi2tcfuhv" path="res://assets/sprites/environment/rock_large.png" id="7_nl2qu"]
+[ext_resource type="Texture2D" uid="uid://dpfni0lumt1tg" path="res://assets/sprites/environment/sun.png" id="8_fxs1w"]
 
 [node name="Environment" type="Node2D"]
 script = ExtResource("1_6c4yq")
