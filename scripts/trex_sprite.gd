@@ -1,6 +1,5 @@
 extends AnimatedSprite2D
 
-
 # Test trex and trex_shadow run animations
 
 # I split the sprites into two different Sprite2D scenes so that when I add the
