@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bqx7rydhrsbim"]
+[gd_scene load_steps=29 format=3 uid="uid://bqx7rydhrsbim"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ooo1q"]
 [ext_resource type="Texture2D" uid="uid://v8qwrruuqt6r" path="res://assets/sprites/trex/crouch/0.png" id="2_r421t"]
@@ -134,9 +134,15 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fe1gb"]
+size = Vector2(152, 98)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_62md1"]
-radius = 33.5409
-height = 142.228
+radius = 64.0
+height = 146.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ap2so"]
+size = Vector2(105, 160)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -145,22 +151,23 @@ collision_mask = 5
 script = ExtResource("1_ooo1q")
 
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-11, -80)
+position = Vector2(-120, -240)
 sprite_frames = SubResource("SpriteFrames_cdxso")
-animation = &"run"
+animation = &"crouch"
 autoplay = "idle"
-frame_progress = 0.966985
+frame_progress = 0.40815
 centered = false
 
 [node name="RunningCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(133, 85)
-rotation = 0.461265
-shape = SubResource("CapsuleShape2D_62md1")
+position = Vector2(-1, -50)
+shape = SubResource("RectangleShape2D_fe1gb")
 
 [node name="CrouchingCollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(112, 103)
-rotation = 1.5708
+position = Vector2(21, -80)
 shape = SubResource("CapsuleShape2D_62md1")
+
+[node name="JumpingCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -94)
+shape = SubResource("RectangleShape2D_ap2so")
 
 [connection signal="animation_finished" from="PlayerAnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

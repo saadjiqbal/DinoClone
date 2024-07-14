@@ -52,6 +52,7 @@ func spawn_obstacles() -> void:
 		# 35 is the offset num of pixels otherwise, obstacle spawns on ground above dino position
 		var new_obstacle_y_pos = screen_size.y - ground_height - ((new_obstacle_h * new_obstacle_scale.y) / 2) + 35
 
+		# I think this is a typo
 		add_osbtacle(new_obstacle, new_obstacle_y_pos)
 
 	# Currently 50% chance to generate bird but this should be tied to game difficulty.

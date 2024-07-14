@@ -3,20 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://b3jut2m7dusuw" path="res://assets/sprites/obstacles/cactus_large.png" id="1_cn5bo"]
 [ext_resource type="Script" path="res://scripts/large_cactus.gd" id="1_xu1ho"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8fiv"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_meog6"]
 radius = 42.6667
-height = 170.667
+height = 154.667
 
 [node name="LargeCactus" type="Area2D"]
 scale = Vector2(0.75, 0.75)
-collision_layer = 4
-collision_mask = 2
 script = ExtResource("1_xu1ho")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-84, -161.333)
 texture = ExtResource("1_cn5bo")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(89.3333, 84)
-shape = SubResource("CapsuleShape2D_w8fiv")
+position = Vector2(0, -80)
+shape = SubResource("CapsuleShape2D_meog6")
