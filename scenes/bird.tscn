@@ -18,7 +18,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 10.0,
 "texture": ExtResource("1_outs2")
 }, {
 "duration": 1.0,
@@ -44,7 +44,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"flap",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2my5"]
@@ -58,7 +58,7 @@ script = ExtResource("1_1x3sn")
 sprite_frames = SubResource("SpriteFrames_035ef")
 animation = &"flap"
 autoplay = "flap"
-frame_progress = 0.557044
+frame_progress = 0.620728
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
