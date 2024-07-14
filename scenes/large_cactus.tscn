@@ -4,18 +4,18 @@
 [ext_resource type="Script" path="res://scripts/large_cactus.gd" id="1_xu1ho"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_meog6"]
-radius = 42.6667
-height = 154.667
+radius = 28.0
+height = 112.0
 
 [node name="LargeCactus" type="Area2D"]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_xu1ho")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-84, -161.333)
+position = Vector2(-69.3333, -120)
 texture = ExtResource("1_cn5bo")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -80)
+position = Vector2(0, -57.3333)
 shape = SubResource("CapsuleShape2D_meog6")

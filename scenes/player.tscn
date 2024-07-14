@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bqx7rydhrsbim"]
+[gd_scene load_steps=40 format=3 uid="uid://bqx7rydhrsbim"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ooo1q"]
 [ext_resource type="Texture2D" uid="uid://cfmpjrsvq25bw" path="res://assets/sprites/trex/crouch/2.png" id="3_khu16"]
@@ -28,6 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://ba5dc5ce6qa4u" path="res://assets/sprites/shadow/idle/01.png" id="26_4gpvb"]
 [ext_resource type="Texture2D" uid="uid://dnb7vwxjlo8i8" path="res://assets/sprites/shadow/jump/01.png" id="27_dfobc"]
 [ext_resource type="Texture2D" uid="uid://cucpwk0ctw648" path="res://assets/sprites/shadow/jump/02.png" id="28_ups6r"]
+[ext_resource type="Texture2D" uid="uid://ddj51msybqepm" path="res://assets/sprites/shadow/run/01.png" id="29_5s10p"]
+[ext_resource type="Texture2D" uid="uid://5ipg7q0r6tir" path="res://assets/sprites/shadow/run/02.png" id="30_yudkr"]
+[ext_resource type="Texture2D" uid="uid://botowfmmvxsv8" path="res://assets/sprites/shadow/run/03.png" id="31_u7rk0"]
+[ext_resource type="Texture2D" uid="uid://c4bayyxkcb41f" path="res://assets/sprites/shadow/run/04.png" id="32_vbhl5"]
+[ext_resource type="Texture2D" uid="uid://dgk7cib34n6o4" path="res://assets/sprites/shadow/run/05.png" id="33_uei86"]
+[ext_resource type="Texture2D" uid="uid://cb35osbwuas5v" path="res://assets/sprites/shadow/run/06.png" id="34_uiqpk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cdxso"]
 animations = [{
@@ -155,10 +161,28 @@ animations = [{
 "name": &"jump",
 "speed": 6.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_5s10p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yudkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u7rk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_vbhl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_uei86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uiqpk")
+}],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fe1gb"]
@@ -180,31 +204,26 @@ script = ExtResource("1_ooo1q")
 [node name="PlayerAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-120, -240)
 sprite_frames = SubResource("SpriteFrames_cdxso")
-animation = &"jump"
+animation = &"crouch"
 autoplay = "idle"
-frame_progress = 0.658495
 centered = false
 
 [node name="ShadowAnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-116, 0)
+position = Vector2(-121, 0)
 sprite_frames = SubResource("SpriteFrames_enkw7")
-animation = &"jump"
+animation = &"crouch"
 autoplay = "idle"
-frame_progress = 0.296383
 centered = false
 
 [node name="RunningCollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-1, -50)
 shape = SubResource("RectangleShape2D_fe1gb")
 
 [node name="CrouchingCollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(21, -80)
 shape = SubResource("CapsuleShape2D_62md1")
 
 [node name="JumpingCollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(1.5, -94)
 shape = SubResource("RectangleShape2D_ap2so")
 

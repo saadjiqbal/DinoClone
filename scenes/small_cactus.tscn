@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://dla0odtunpcb7" path="res://assets/sprites/obstacles/cactus_small.png" id="1_g5qjf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rrk5l"]
-radius = 26.6667
-height = 104.0
+radius = 28.0
+height = 72.0
 
 [node name="SmallCactus" type="Area2D"]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_8chjr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-14.6667, -30.6667)
+position = Vector2(-10.6667, -20)
 texture = ExtResource("1_g5qjf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -57.3333)
+position = Vector2(0, -36)
 shape = SubResource("CapsuleShape2D_rrk5l")
