@@ -1,15 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcf4tv5sfq201"]
+[gd_scene load_steps=4 format=3 uid="uid://dcf4tv5sfq201"]
 
 [ext_resource type="Texture2D" uid="uid://b3jut2m7dusuw" path="res://assets/sprites/obstacles/cactus_large.png" id="1_cn5bo"]
 [ext_resource type="Script" path="res://scripts/large_cactus.gd" id="1_xu1ho"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w8fiv"]
+radius = 42.6667
+height = 170.667
+
 [node name="LargeCactus" type="Area2D"]
 scale = Vector2(0.75, 0.75)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_xu1ho")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_cn5bo")
 centered = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(100, 10, 100, 70, 120, 70, 120, 40, 130, 40, 130, 79, 120, 79, 120, 90, 100, 90, 100, 160, 80, 160, 80, 120, 70, 120, 70, 110, 50, 110, 50, 50, 60, 50, 60, 100, 80, 100, 80, 10)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(89.3333, 84)
+shape = SubResource("CapsuleShape2D_w8fiv")

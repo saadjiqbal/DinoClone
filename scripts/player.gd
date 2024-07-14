@@ -14,8 +14,6 @@ func _physics_process(delta):
 
 	if is_on_floor():
 		# Enable collision shape for running if we're touching the floor
-		running_collision_shape.disabled = false
-		crouching_collision_shape.disabled = true
 
 		# Handle jump.
 		if Input.is_action_pressed("jump"):
@@ -23,8 +21,6 @@ func _physics_process(delta):
 		elif Input.is_action_pressed("crouch"):
 			player_animated_sprite_2d.play("crouch")
 			# Disable collision shape for running if we're crouching
-			running_collision_shape.disabled = true
-			running_collision_shape.disabled = false
 		else:
 			player_animated_sprite_2d.play("run")
 	else:

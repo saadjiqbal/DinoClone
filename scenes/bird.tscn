@@ -52,6 +52,7 @@ radius = 19.0
 height = 114.0
 
 [node name="Bird" type="Area2D"]
+z_index = 1
 script = ExtResource("1_1x3sn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
