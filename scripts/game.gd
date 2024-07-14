@@ -27,6 +27,8 @@ var score : float
 
 var spawn_timer : Timer
 var spawn_delay : float
+var timer_lower_limit : float = 0.5
+var timer_upper_limit : float = 2.0
 
 var spawn_timer_created : bool = false
 
