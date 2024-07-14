@@ -25,19 +25,20 @@ var score : float
 
 # ON READY VARIABLES:
 @onready var ground : StaticBody2D = $Ground
+@onready var hud : CanvasLayer = $HUD
 
 func _ready() -> void:
 	ground_height = ground.get_node("Sprite2D").texture.get_height()
 	screen_size = get_window().size
 
 func _process(_delta) -> void:
-	update_score()
+	score_handler()
 	spawn_obstacles()
 	despawn_obstacle()
 
-func update_score() -> void:
+func score_handler() -> void:
 	score += SCORE_INCREMENT
-	print("Score: ", int(score))
+	hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
 
 func spawn_obstacles() -> void:
 	if current_obstacles.is_empty() || previous_obstacle.position.x < randi_range(200, 500):
