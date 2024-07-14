@@ -1,8 +1,9 @@
 extends Node2D
 
+# CONSTANTS:
 const MAX_OBSTACLES : int = 5
 
-@onready var ground : StaticBody2D = $Ground
+# VARIABLES:
 
 # Preload all obstacle scenes
 var large_cactus_scene = preload("res://scenes/large_cactus.tscn")
@@ -15,8 +16,11 @@ var screen_size : Vector2i
 # We can't add the bird scene into here as the bird is an animated sprite. 
 var obstacles = [large_cactus_scene, small_cactus_scene]
 var current_obstacles : Array
-var previous_obstacle
+var previous_obstacle : Area2D
 var bird_heights = [200, 300, 400]
+
+# ON READY VARIABLES:
+@onready var ground : StaticBody2D = $Ground
 
 func _ready():
 	ground_height = ground.get_node("Sprite2D").texture.get_height()

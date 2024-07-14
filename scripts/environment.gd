@@ -1,14 +1,16 @@
 extends Node2D
 
-@onready var background_layer: Node2D = $BackgroundLayer
-@onready var large_cloud_layer: Node2D = $LargeCloudLayer
-@onready var small_cloud_layer: Node2D = $SmallCloudLayer
-@onready var foreground_layer: Node2D = $ForegroundLayer
-
+# EXPORT VARIABLES:
 @export var background_layer_speed: int = 0
 @export var large_cloud_layer_speed: int = 0
 @export var small_cloud_layer_speed: int = 0
 @export var foreground_layer_speed: int = 0
+
+# ON READY VARIABLES:
+@onready var background_layer: Node2D = $BackgroundLayer
+@onready var large_cloud_layer: Node2D = $LargeCloudLayer
+@onready var small_cloud_layer: Node2D = $SmallCloudLayer
+@onready var foreground_layer: Node2D = $ForegroundLayer
 
 var layers : Array
 

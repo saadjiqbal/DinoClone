@@ -1,7 +1,9 @@
 extends Area2D
 
+# CONSTANTS:
 const SPEED : int = 10
 
+# ON READY VARIABLES:
 @onready var large_cactus : Area2D = $"."
 
 func _ready():

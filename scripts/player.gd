@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
+# CONSTANTS:
 const GRAVITY = 5000
 const JUMP_VELOCITY = -1500
 
+# ON READY VARIABLES:
 @onready var player_animated_sprite_2d : AnimatedSprite2D = $PlayerAnimatedSprite2D
 @onready var running_collision_shape : CollisionShape2D = $RunningCollisionShape2D
 @onready var crouching_collision_shape : CollisionShape2D = $CrouchingCollisionShape2D2 
