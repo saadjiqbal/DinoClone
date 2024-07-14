@@ -49,11 +49,13 @@ func _process(_delta) -> void:
 
 func spawn_timer_controller() -> void:
 	if !spawn_timer_created:
+		spawn_timer_created = true
+		
 		spawn_timer = Timer.new()
 
 		add_child(spawn_timer)
 
-		spawn_timer_created = true
+		
 		spawn_timer.one_shot = false
 		spawn_timer.autostart = true
 
