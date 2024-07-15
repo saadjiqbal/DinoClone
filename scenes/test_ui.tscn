@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://qoh3u2m4vkpr"]
+
+[ext_resource type="Script" path="res://scenes/test_ui.gd" id="1_8hlvk"]
+[ext_resource type="FontFile" uid="uid://48wrq0s51l22" path="res://assets/fonts/dpcomic.ttf" id="1_8hrih"]
+[ext_resource type="PackedScene" uid="uid://b1h0ikwvdudw4" path="res://scenes/ui_tile_map.tscn" id="2_cdkow"]
+
+[sub_resource type="Theme" id="Theme_muo3m"]
+default_font = ExtResource("1_8hrih")
+default_font_size = 30
+
+[node name="TestUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_muo3m")
+script = ExtResource("1_8hlvk")
+
+[node name="UITileMap" parent="." instance=ExtResource("2_cdkow")]
+position = Vector2(1, 1)
+scale = Vector2(0.6, 0.6)
+layer_0/tile_data = PackedInt32Array(262151, 0, 0, 262152, 65536, 0, 262153, 131072, 0)
+
+[node name="TestButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -120.0
+offset_right = -81.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "test button
+"
+flat = true
+
+[connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]
